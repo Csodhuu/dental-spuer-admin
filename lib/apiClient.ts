@@ -18,16 +18,33 @@ service.interceptors.request.use((config) => {
 
 service.interceptors.response.use(
   (res) => {
-    if (res.data.message === "Unauthorized") {
-      window.location.href = "/";
+    if (
+      res.data.message === "Unauthorized" &&
+      !res.config?.url?.includes("/api/auth/super-admin/login")
+    ) {
+      if (typeof window !== "undefined") {
+        window.location.href = "/";
+      }
     }
     return res;
   },
   (err) => {
-    if (err.response.status === 401 || err.response.status === 403) {
-      if (window) {
+    if (!err.response) {
+      return Promise.reject(err);
+    }
+
+    const status = err.response.status;
+    const requestUrl = err.config?.url ?? "";
+    const isLoginRequest =
+      typeof requestUrl === "string" &&
+      requestUrl.includes("/api/auth/super-admin/login");
+
+    if ((status === 401 || status === 403) && !isLoginRequest) {
+      if (typeof window !== "undefined") {
         window.location.href = "/";
       }
     }
+
+    return Promise.reject(err);
   }
 );
