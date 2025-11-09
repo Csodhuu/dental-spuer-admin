@@ -57,6 +57,7 @@ export default function LoginPage() {
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
+      e.preventDefault();
       handleLogin();
     }
   };
@@ -157,8 +158,10 @@ export default function LoginPage() {
             </div>
 
             <Button
-              type="submit"
+              type="button"
               className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-200 flex items-center justify-center"
+              onClick={handleLogin}
+              disabled={mutation.isPending}
             >
               <>
                 Нэвтрэх
