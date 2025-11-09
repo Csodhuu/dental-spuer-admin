@@ -63,22 +63,31 @@ export default function DashboardPage() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
         <header className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div className="space-y-3">
-            <Badge className="w-fit bg-primary/20 text-primary">Network control</Badge>
+            <Badge className="w-fit bg-primary/20 text-primary">
+              Network control
+            </Badge>
             <div className="space-y-1">
               <h1 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
                 Super admin overview
               </h1>
               <p className="text-base text-muted-foreground">
-                Stay ahead of clinic operations, staffing, and compliance across the entire dental network.
+                Stay ahead of clinic operations, staffing, and compliance across
+                the entire dental network.
               </p>
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="outline" className="border-primary/40 text-primary">
+            <Button
+              variant="outline"
+              className="border-primary/40 text-primary"
+            >
               Export report
             </Button>
             <Button>New broadcast</Button>
-            <Avatar fallback="SA" className="h-11 w-11 border border-primary/40" />
+            <Avatar
+              fallback="SA"
+              className="h-11 w-11 border border-primary/40"
+            />
           </div>
         </header>
 
@@ -90,8 +99,12 @@ export default function DashboardPage() {
                 className="rounded-lg border border-border/40 bg-background/40 p-5 shadow-inner shadow-primary/5"
               >
                 <p className="text-sm text-muted-foreground">{metric.label}</p>
-                <p className="mt-3 text-3xl font-semibold text-foreground">{metric.value}</p>
-                <p className="mt-2 text-xs uppercase tracking-wide text-primary">{metric.change}</p>
+                <p className="mt-3 text-3xl font-semibold text-foreground">
+                  {metric.value}
+                </p>
+                <p className="mt-2 text-xs uppercase tracking-wide text-primary">
+                  {metric.change}
+                </p>
               </div>
             ))}
           </CardContent>
@@ -109,7 +122,9 @@ export default function DashboardPage() {
               <Card className="border border-border/60 bg-card/70">
                 <CardHeader>
                   <CardTitle>Network health</CardTitle>
-                  <CardDescription>Real-time signals from every clinic.</CardDescription>
+                  <CardDescription>
+                    Real-time signals from every clinic.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="space-y-2">
@@ -122,19 +137,33 @@ export default function DashboardPage() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between rounded-lg bg-background/40 px-4 py-3">
                       <div>
-                        <p className="text-sm font-medium text-foreground">Staff coverage</p>
-                        <p className="text-xs text-muted-foreground">Across all departments</p>
+                        <p className="text-sm font-medium text-foreground">
+                          Staff coverage
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          Across all departments
+                        </p>
                       </div>
-                      <Badge variant="outline" className="border-primary/40 text-primary">
+                      <Badge
+                        variant="outline"
+                        className="border-primary/40 text-primary"
+                      >
                         97%
                       </Badge>
                     </div>
                     <div className="flex items-center justify-between rounded-lg bg-background/40 px-4 py-3">
                       <div>
-                        <p className="text-sm font-medium text-foreground">Inventory balance</p>
-                        <p className="text-xs text-muted-foreground">Critical supplies stocked</p>
+                        <p className="text-sm font-medium text-foreground">
+                          Inventory balance
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          Critical supplies stocked
+                        </p>
                       </div>
-                      <Badge variant="outline" className="border-primary/40 text-primary">
+                      <Badge
+                        variant="outline"
+                        className="border-primary/40 text-primary"
+                      >
                         Stable
                       </Badge>
                     </div>
@@ -146,24 +175,41 @@ export default function DashboardPage() {
                 <CardHeader className="flex flex-row items-start justify-between">
                   <div>
                     <CardTitle>Escalations</CardTitle>
-                    <CardDescription>Clinic alerts requiring review.</CardDescription>
+                    <CardDescription>
+                      Clinic alerts requiring review.
+                    </CardDescription>
                   </div>
-                  <Button variant="ghost" className="text-primary hover:bg-primary/10">
+                  <Button
+                    variant="ghost"
+                    className="text-primary hover:bg-primary/10"
+                  >
                     View all
                   </Button>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="rounded-lg border border-border/40 bg-background/40 p-4">
-                    <p className="text-sm font-medium text-foreground">Regulatory audit pending</p>
-                    <p className="text-xs text-muted-foreground">Downtown Dental · respond by Friday</p>
+                    <p className="text-sm font-medium text-foreground">
+                      Regulatory audit pending
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Downtown Dental · respond by Friday
+                    </p>
                   </div>
                   <div className="rounded-lg border border-border/40 bg-background/40 p-4">
-                    <p className="text-sm font-medium text-foreground">Equipment outage reported</p>
-                    <p className="text-xs text-muted-foreground">Seaside Implants · chair 5 offline</p>
+                    <p className="text-sm font-medium text-foreground">
+                      Equipment outage reported
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Seaside Implants · chair 5 offline
+                    </p>
                   </div>
                   <div className="rounded-lg border border-border/40 bg-background/40 p-4">
-                    <p className="text-sm font-medium text-foreground">Billing discrepancies</p>
-                    <p className="text-xs text-muted-foreground">North Ridge Pediatrics · 6 claims flagged</p>
+                    <p className="text-sm font-medium text-foreground">
+                      Billing discrepancies
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      North Ridge Pediatrics · 6 claims flagged
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -175,9 +221,14 @@ export default function DashboardPage() {
               <CardHeader className="flex flex-row items-center justify-between">
                 <div>
                   <CardTitle>Today&apos;s spotlight</CardTitle>
-                  <CardDescription>High priority visits across the network.</CardDescription>
+                  <CardDescription>
+                    High priority visits across the network.
+                  </CardDescription>
                 </div>
-                <Button variant="outline" className="border-primary/40 text-primary">
+                <Button
+                  variant="outline"
+                  className="border-primary/40 text-primary"
+                >
                   Sync calendars
                 </Button>
               </CardHeader>
@@ -195,8 +246,13 @@ export default function DashboardPage() {
                         {appointment.clinic}
                       </p>
                     </div>
-                    <div className="text-xs text-muted-foreground md:text-sm">{appointment.time}</div>
-                    <Badge variant="outline" className="border-primary/40 text-primary">
+                    <div className="text-xs text-muted-foreground md:text-sm">
+                      {appointment.time}
+                    </div>
+                    <Badge
+                      variant="outline"
+                      className="border-primary/40 text-primary"
+                    >
                       {appointment.status}
                     </Badge>
                   </div>
@@ -236,7 +292,10 @@ export default function DashboardPage() {
                   <Separator className="bg-border/60" />
                   <div className="flex items-center justify-between text-sm text-muted-foreground">
                     <span>Top performing clinic</span>
-                    <Badge variant="outline" className="border-primary/40 text-primary">
+                    <Badge
+                      variant="outline"
+                      className="border-primary/40 text-primary"
+                    >
                       Harbor Dental · 118%
                     </Badge>
                   </div>
@@ -246,12 +305,18 @@ export default function DashboardPage() {
               <Card className="border border-border/60 bg-card/70">
                 <CardHeader>
                   <CardTitle>Experience metrics</CardTitle>
-                  <CardDescription>Patient feedback across markets.</CardDescription>
+                  <CardDescription>
+                    Patient feedback across markets.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-5">
                   <div>
-                    <p className="text-sm text-muted-foreground">Satisfaction index</p>
-                    <p className="text-3xl font-semibold text-foreground">4.7 / 5</p>
+                    <p className="text-sm text-muted-foreground">
+                      Satisfaction index
+                    </p>
+                    <p className="text-3xl font-semibold text-foreground">
+                      4.7 / 5
+                    </p>
                     <p className="text-xs text-primary">+0.3 vs last month</p>
                   </div>
                   <div className="space-y-3">
@@ -268,7 +333,10 @@ export default function DashboardPage() {
                     </div>
                     <Progress value={61} />
                   </div>
-                  <Button variant="ghost" className="w-full text-primary hover:bg-primary/10">
+                  <Button
+                    variant="ghost"
+                    className="w-full text-primary hover:bg-primary/10"
+                  >
                     View survey transcripts
                   </Button>
                 </CardContent>
