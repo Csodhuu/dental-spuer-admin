@@ -1,23 +1,33 @@
 import axios from "axios";
-import { getCookie, deleteCookie } from "cookies-next";
 
-export const apiClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://dental-backend-eekj.onrender.com",
-  headers: { "Content-Type": "application/json" },
+import { getCookie } from "cookies-next";
+
+export const BASEURL = "https://dental-backend-eekj.onrender.com";
+
+export const service = axios.create({
+  baseURL: "https://dental-backend-eekj.onrender.com",
 });
 
-apiClient.interceptors.request.use((config) => {
-  const token = getCookie("adminAccessToken");
-  if (token) config.headers.Authorization = `Bearer ${token}`;
+service.interceptors.request.use((config) => {
+  const token = typeof window !== "undefined" ? getCookie("accessToken") : null;
+  if (token) {
+    config.headers.Authorization = `${token}`;
+  }
   return config;
 });
 
-apiClient.interceptors.response.use(
-  (res) => res,
-  (err) => {
-    if (err?.response?.status === 401) {
-      deleteCookie("adminAccessToken");
+service.interceptors.response.use(
+  (res) => {
+    if (res.data.message === "Unauthorized") {
+      window.location.href = "/";
     }
-    return Promise.reject(err);
+    return res;
+  },
+  (err) => {
+    if (err.response.status === 401 || err.response.status === 403) {
+      if (window) {
+        window.location.href = "/";
+      }
+    }
   }
 );

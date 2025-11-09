@@ -20,7 +20,7 @@ import { useMutation } from "@tanstack/react-query";
 import { setCookie } from "cookies-next";
 import { ArrowRight, Mail } from "lucide-react";
 import { toast } from "sonner";
-import { login } from "./hook";
+import { login } from "./login/hook";
 
 export default function LoginPage() {
   const router = useRouter();
