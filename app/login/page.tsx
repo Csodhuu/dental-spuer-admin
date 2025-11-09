@@ -20,21 +20,28 @@ export default function LoginPage() {
       <div className="grid w-full max-w-5xl gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <Card className="border-none bg-gradient-to-br from-[#14081f] via-[#09020f] to-[#050505]">
           <CardHeader className="space-y-6">
-            <Badge className="w-fit bg-primary/30 text-primary">Dental Network</Badge>
+            <Badge className="w-fit bg-primary/30 text-primary">
+              Dental Network
+            </Badge>
             <div className="space-y-2">
               <CardTitle className="text-4xl font-semibold text-foreground">
                 Welcome back
               </CardTitle>
               <CardDescription className="text-base text-muted-foreground">
-                Sign in with your work email to access the super admin dashboard.
+                Sign in with your work email to access the super admin
+                dashboard.
               </CardDescription>
             </div>
             <div className="space-y-3 text-sm text-muted-foreground">
               <p className="font-medium text-foreground">What you can do:</p>
               <ul className="space-y-1.5 text-muted-foreground">
-                <li>• Monitor chair utilization across all clinics in real time.</li>
+                <li>
+                  • Monitor chair utilization across all clinics in real time.
+                </li>
                 <li>• Approve treatment plans and manage compliance.</li>
-                <li>• Coordinate staffing and follow-ups with a single view.</li>
+                <li>
+                  • Coordinate staffing and follow-ups with a single view.
+                </li>
               </ul>
             </div>
           </CardHeader>
@@ -44,7 +51,10 @@ export default function LoginPage() {
               <span>All systems operational</span>
             </div>
             <p>
-              Need an account? <Link href="#" className="text-primary hover:underline">Request access from IT support</Link>
+              Need an account?{" "}
+              <Link href="#" className="text-primary hover:underline">
+                Request access from IT support
+              </Link>
             </p>
           </CardFooter>
         </Card>
@@ -59,7 +69,12 @@ export default function LoginPage() {
               <Label htmlFor="email" className="text-foreground">
                 Email
               </Label>
-              <Input id="email" type="email" placeholder="you@clinic.com" autoComplete="email" />
+              <Input
+                id="email"
+                type="email"
+                placeholder="you@clinic.com"
+                autoComplete="email"
+              />
             </div>
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -70,7 +85,12 @@ export default function LoginPage() {
                   Forgot password?
                 </Link>
               </div>
-              <Input id="password" type="password" placeholder="••••••••" autoComplete="current-password" />
+              <Input
+                id="password"
+                type="password"
+                placeholder="••••••••"
+                autoComplete="current-password"
+              />
             </div>
 
             <Button className="w-full" type="submit">
@@ -92,7 +112,8 @@ export default function LoginPage() {
               </Link>
             </div>
             <p className="leading-relaxed">
-              By signing in you agree to follow our HIPAA compliance guidelines and data sharing policies.
+              By signing in you agree to follow our HIPAA compliance guidelines
+              and data sharing policies.
             </p>
           </CardFooter>
         </Card>
