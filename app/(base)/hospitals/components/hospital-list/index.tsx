@@ -67,7 +67,7 @@ export default function HospitalList({ data, isLoading }: Props) {
           },
           {
             label: "Утасны дугаар",
-            accessor: "phone",
+            accessor: "phoneNumber",
           },
         ]}
         isLoading={isLoading}

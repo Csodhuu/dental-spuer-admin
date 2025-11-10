@@ -25,7 +25,7 @@ const schema = z.object({
     .string()
     .regex(/^\d{7}$/, "РД 7 оронтой тоо байх ёстой"),
   address: z.string().min(3, "Хаяг хамгийн багадаа 3 тэмдэгт"),
-  phone: z
+  phoneNumber: z
     .string()
     .regex(/^(?:\+976\d{8}|\d{8})$/, "Утасны дугаар буруу байна"),
   logo: z.string().url("Зөв URL оруулна уу"),
@@ -37,11 +37,11 @@ export default function HospitalDialog({ open, onOpenChange }: Props) {
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
     defaultValues: {
-      name: "Smile Dental Clinic",
-      registrationNumber: "1234567",
-      address: "Peace Avenue, Ulaanbaatar",
-      phone: "+97699998888",
-      logo: "https://example.com/logo.png",
+      name: "",
+      registrationNumber: "",
+      address: "",
+      phoneNumber: "",
+      logo: "",
     },
   });
 
@@ -97,7 +97,7 @@ export default function HospitalDialog({ open, onOpenChange }: Props) {
               />
               <InputFieldRHF
                 control={form.control}
-                name="phone"
+                name="phoneNumber"
                 label="Phone"
                 placeholder="+976XXXXXXXX"
                 required

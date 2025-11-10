@@ -7,8 +7,9 @@ export interface HospitalForm {
   name: string;
   registrationNumber: string;
   address: string;
-  phone: string;
+  phoneNumber: string;
   logo: string;
+  _id?: string;
 }
 
 export const useGetHospital = () => {
