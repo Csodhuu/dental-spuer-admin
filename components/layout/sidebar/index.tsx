@@ -12,7 +12,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
-import { ClipboardCheck, LayoutDashboard, X } from "lucide-react";
+import { ClipboardCheck, LayoutDashboard, Users2, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -33,6 +33,12 @@ export default function MainSidebar() {
       label: "hospitals",
       icon: ClipboardCheck,
       href: "/hospitals",
+    },
+    {
+      id: "/system-users",
+      label: "system-users",
+      icon: Users2,
+      href: "/system-users",
     },
   ];
 

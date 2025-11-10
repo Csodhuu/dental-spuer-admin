@@ -9,7 +9,7 @@ interface ButtonWithAdornmentProps
   endAdornment?: ReactNode;
   label?: string | ReactNode;
   size?: "sm" | "default" | "lg" | "icon";
-  variant?: "default" | "secondary" | "ghost" | "outline" | "link";
+  variant?: "default" | "secondary" | "ghost" | "outline" | "link" | "print";
 }
 
 export default function ButtonWithAdornment({

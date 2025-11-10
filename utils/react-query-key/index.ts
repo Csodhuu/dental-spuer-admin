@@ -1,1 +1,1 @@
-export const GET_HOSPITALS = "GET_HOSPITALS";
+export const HOSPITALS_KEY = "HOSPITALS_KEY";
